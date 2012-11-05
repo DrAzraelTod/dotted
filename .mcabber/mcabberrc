@@ -1,0 +1,602 @@
+# $Header: /home/wschlich/.mcabberrc,v 1.2 2006/12/17 13:21:36 wschlich Exp wschlich $
+
+##
+## server and connection settings
+##
+
+set username = drazraeltod
+set jid=drazraeltod@jabber.ccc.de
+#set password = 
+set server = jabber.ccc.de
+set port = 5223
+set ssl = 1
+set ssl_verify = -1
+#set ssl_cafile = /usr/share/ssl/certs/ca-bundle.crt
+set ssl_capath = /etc/ssl/certs
+#set ssl_ciphers =
+set resource = server
+set priority = 0
+set nickname = "Dr. Azrael Tod"
+set pinginterval = 30
+
+##
+## PGP settings
+##
+
+#set pgp = 0
+#set pgp_private_key = "01234567890ABCDE"
+#set pgp_passphrase = "doesnotworkwithgpgagent"
+#set pgp_passphrase_retries = 2
+
+## PGP contacts
+#pgp disable foo@bar.org
+#pgp setkey bar@foo.net C9940A9BB0B92210
+#pgp +force foo@bar.org
+#pgp -force foo@bar.org
+
+##
+## OTR (Off-The-Record) settings
+##
+
+set otr = 0
+set otr_dir = ~/.mcabber/otr
+#otrpolicy default manual
+otrpolicy default opportunistic
+#otrpolicy myfriend@jabber.org always
+
+##
+## proxy settings
+##
+
+#set proxy_host = "proxy-hostname"
+#set proxy_port = 3128
+#set proxy_user = "username"
+#set proxy_pass = "password"
+
+##
+## message/conference logging
+##
+
+set logging = 1
+set load_logs = 1
+set logging_dir = ~/.mcabber/history
+set logging_ignore_status = 1
+set log_muc_conf = 1
+set load_muc_logs = 1
+set max_history_age = 0
+set max_history_blocks = 0
+
+##
+## trace log
+##
+
+set tracelog_level = 0
+#set tracelog_level = 1
+#set tracelog_level = 2
+set tracelog_file = ~/.mcabber/tracelog
+
+##
+## event processing
+##
+
+set events_command = ~/.mcabber/event.sh
+set events_ignore_active_window = 0
+set eventcmd_checkstatus = 1
+set event_log_files = 1
+set event_log_dir = ~/.mcabber/event.d
+set fifo_name=~/.mcabber/mcabber.fifo
+set statefile = ~/mcabber
+
+##
+## interface settings
+##
+
+set lang = en
+set cmdhistory_lines = 1000
+set autoaway = 300
+set block_unsubscribed = 0
+set delete_on_reject = 1
+set muc_auto_whois = 0
+set iq_version_hide_os = 0
+set beep_on_message = 1
+set log_display_sender = 1
+set log_win_height = 5
+set log_win_on_top = 0
+set roster_width = 30
+set roster_win_on_right = 0
+set roster_display_filter = ofdna
+set buddy_format = 2
+set buddy_me_fulljid = 0
+set show_status_in_buffer = 1
+set time_prefix = 0
+set disable_chatstates = 0
+set log_display_presence = 1
+set show_status_in_buffer = 1
+
+##
+## aspell settings
+##
+
+set aspell_enable = 1
+set aspell_lang = de_DE
+#set aspell_encoding = iso8859-1
+set aspell_encoding = UTF-8
+
+##
+## interface colors
+##
+
+set color_background   = black
+set color_general      = brightwhite
+set color_msgin        = brightwhite
+set color_msgout       = brightyellow
+set color_msghl        = brightmagenta
+set color_bgstatus     = blue
+set color_status       = brightwhite
+set color_roster       = brightwhite
+set color_bgrostersel  = red
+set color_rostersel    = brightwhite
+set color_rosterselmsg = brightyellow
+set color_rosternewmsg = brightyellow
+
+color roster * * white
+color roster f * brightblue
+color roster o * brightgreen
+color roster a * brightcyan
+color roster n * brightred
+color roster d * brightmagenta
+color roster _ * brightblack
+#color roster adn *@jabber.org yellow
+#color roster foand_ myfriend@jabber.org brightgreen
+
+set nick_colors = red green blue
+color muc * on
+#color mucnick myfriend yellow
+
+##
+## status messages
+##
+
+#set message = Unique message status for all states
+set message_avail = Fnord! Das tut was!
+set message_free = Welcome to the Jerry Springer show!
+set message_dnd = Disturb`N`Die!!!111!11!1!
+set message_notavail = very creative and artistic not-available-message - use with care!
+set message_away = .oO(?!)
+set message_autoaway = Gone with the wind
+
+##
+## command aliases
+##
+
+alias me = say /me
+
+alias on = status online
+alias away = status away
+alias dnd = status dnd
+alias na = status notavail
+
+alias note = roster note
+alias s = roster search
+
+alias names = room names
+alias pm = room privmsg
+alias jmc = room join mcabber@conf.lilotux.net
+
+alias time = request time
+alias vcard = request vcard
+alias idle = request last
+alias work = status notavail  Я твой слуга, Я твой работник
+
+##
+## key bindings
+##
+
+# [Ctrl + a]: *** default for 'jump to beginning of line' ***
+#bind 1 = iline iline_start
+
+# [Ctrl + b]: 
+#bind 2 =
+
+# [Ctrl + c]: *** does not work ***
+#bind 3 = 
+
+# [Ctrl + d]: leaves chat mode (closes chat window)
+bind 4 = chat_disable
+
+# [Ctrl + e]: *** default for 'jump to end of line' ***
+#bind 5 = iline iline_end
+
+# [Ctrl + f]: 
+#bind 6 = 
+
+# [Ctrl + g]: 
+#bind 7 = 
+
+# [Ctrl + h]: *** does not work ***
+#bind 8 =
+
+# [Ctrl + i]: *** does not work ***
+#bind 9 = 
+
+# [Ctrl + j]: 
+#bind 10 = 
+
+# [Ctrl + k]: 
+#bind 11 = 
+
+# [Ctrl + l]: *** default for 'refresh screen', do not use within mcabber or bind screen_refresh to another key ***
+#bind 12 = 
+
+# [Ctrl + m]: *** does not work ***
+#bind 13 = 
+
+# [Ctrl + n]: show current item's note
+bind 14 = roster note
+
+# [Ctrl + o]: *** equivalent to ENTER/RETURN ***
+#bind 15 = iline iline_accept
+
+# [Ctrl + p]: 
+#bind 16 = 
+
+# [Ctrl + q]: quits mcabber
+bind 17 = quit
+
+# [Ctrl + r]: toggle roster display
+bind 18 = roster toggle
+
+# [Ctrl + s]: toggle buffer scroll lock
+bind 19 = buffer scroll_toggle
+
+# [Ctrl + t]: 
+#bind 20 = 
+
+# [Ctrl + u]: *** default for 'delete from current position to beginnin of line', do not use within mcabber ***
+#bind 21 = 
+
+# [Ctrl + v: request version from selected contact (or from all members of selected room)
+bind 22 = request version
+
+# [Ctrl + w]: 
+#bind 23 = 
+
+# [Ctrl + x]: accept input line
+bind 24 = iline iline_accept
+
+# [Ctrl + y]: 
+#bind 25 =
+
+# [Ctrl + z]: 
+#bind 26 =
+
+# [ESC]:
+bind 27 = chat_disable
+
+# [Ctrl + ^]: 
+#bind 30 = 
+
+# [Alt + N] on S2Putty
+bind 241 = roster unread_first
+
+# [F1]: show help
+bind 265 = help
+
+# [F2]: show conference room names
+bind 266 = room names
+
+# [F3]: 
+#bind 267 = 
+
+# [F4]: 
+#bind 268 = 
+
+# [F5]: toggle display of offline contacts
+bind M91 = roster toggle_offline
+
+# [F6]: reload mcabberrc
+bind 270 = source ~/.mcabber/mcabberrc
+
+# [F7]: 
+#bind 271 = 
+
+# [F8]: 
+#bind 272 = 
+
+# [F9]: 
+#bind 273 = 
+
+# [F10]: 
+#bind 274 = 
+
+# [F11]: 
+#bind 275 = 
+
+# [F12]: toggle roster
+bind 276 = roster toggle
+
+# [Ctrl + Up]: scroll up in the buffer (chat window)
+bind 521 = buffer up
+
+# [Ctrl + Dn]: scroll down in the buffer (chat window)
+bind 514 = buffer down
+
+# [Alt + PgUp]: jump to previous group
+bind MK3 = roster group_prev
+
+# [Alt + PgDn]: jump to next group
+bind MK4 = roster group_next
+
+# [Ctrl + Home]: jump to roster top
+bind MK9 = roster top
+
+# [Ctrl + End]: jump to roster bottom
+bind MK10 = roster bottom
+
+# [Ctrl + Alt + a]: *** does not work ***
+#bind M1 = 
+
+# [Ctrl + Alt + b]: *** does not work ***
+#bind M2 = 
+
+# [Ctrl + Alt + c]: 
+#bind M3 = 
+
+# [Ctrl + Alt + d]: 
+#bind M4 = 
+
+# [Ctrl + Alt + e]: 
+#bind M5 = 
+
+# [Ctrl + Alt + f]: 
+#bind M6 = 
+
+# [Ctrl + Alt + g]: 
+#bind M7 = 
+
+# [ESC + Up] on S2Putty
+#bind M259 = 
+
+# [Ctrl + Alt + h]: 
+#bind M263 = 
+
+# [Ctrl + Alt + i] or [ESC + Tab]: 
+#bind M9 = 
+
+# [Ctrl + Alt + j]: 
+#bind M10 = 
+
+# [Ctrl + Alt + k]: 
+#bind M11 = 
+
+# [Ctrl + Alt + l]: 
+#bind M12 = 
+
+# [Ctrl + Alt + m]: 
+#bind M13 = 
+
+# [Ctrl + Alt + n]: 
+#bind M14 = 
+
+# [Ctrl + Alt + o]: 
+#bind M15 = 
+
+# [Ctrl + Alt + p]: 
+#bind M16 = 
+
+# [Ctrl + Alt + q]: 
+#bind M17 = 
+
+# [Ctrl + Alt + r]: 
+#bind M18 = 
+
+# [Ctrl + Alt + s]: 
+#bind M19 = 
+
+# [Ctrl + Alt + t]: 
+#bind M20 = 
+
+# [Ctrl + Alt + u]: 
+#bind M21 = 
+
+# [Ctrl + Alt + v]: 
+#bind M22 = 
+
+# [Ctrl + Alt + w]: 
+#bind M23 = 
+
+# [Ctrl + Alt + x]: 
+#bind M24 = 
+
+# [Ctrl + Alt + y]: 
+#bind M25 = 
+
+# [Ctrl + Alt + z]: 
+#bind M26 = 
+
+# [Ctrl + Alt + ESC / Alt + ESC / ESC-ESC]:
+bind M27 = chat_disable
+
+# [Alt + , ]: 
+#bind M44 = 
+
+# [Alt + -]: 
+#bind M45 = 
+
+# [Alt + .]: 
+#bind M46 = 
+
+# [Alt + :]: 
+#bind M58 = 
+
+# [Alt + ;]: 
+#bind M59 = 
+
+# [Alt + A]: 
+#bind M65 = 
+
+# [Alt + B]: 
+#bind M66 = 
+
+# [Alt + C]: 
+#bind M67 = 
+
+# [Alt + D]: 
+#bind M68 = 
+
+# [Alt + E]: list pending events
+bind M69 = event list
+
+# [Alt + F]: 
+#bind M70 = 
+
+# [Alt + G]: 
+#bind M71 = 
+
+# [Alt + H]: 
+#bind M72 = 
+
+# [Alt + I]: 
+#bind M73 = 
+
+# [Alt + J]: 
+#bind M74 = 
+
+# [Alt + K]: 
+#bind M75 = 
+
+# [Alt + L]: refresh the mcabber screen
+bind M76 = screen_refresh
+
+# [Alt + M]: abort multiline mode
+bind M77 = msay abort
+
+# [Alt + N]: 
+#bind M78 = 
+
+# [Alt + O]: 
+#bind M79 = 
+
+# [Alt + P]: 
+#bind M80 = 
+
+# [Alt + Q]: 
+#bind M81 = 
+
+# [Alt + R]: 
+#bind M82 = 
+
+# [Alt + S]: 
+#bind M83 = 
+
+# [Alt + T]: 
+#bind M84 = 
+
+# [Alt + U]: 
+#bind M85 = 
+
+# [Alt + V]: show mcabber version
+bind M86 = version
+
+# [Alt + W]: 
+#bind M87 = 
+
+# [Alt + X]: 
+#bind M88 = 
+
+# [Alt + Y]: 
+#bind M89 = 
+
+# [Alt + Z]: 
+#bind M90 = 
+
+# [Alt + ^]: 
+#bind M94 = 
+
+# [Alt + _]: 
+#bind M95 = 
+
+# [Alt + a]: switch to previous contact
+bind M97 = roster alternate
+
+# [Alt + b]: 
+#bind M98 = 
+
+# [Alt + c]: 
+#bind M99 = 
+
+# [Alt + d]: 
+#bind M100 = 
+
+# [Alt + e]: 
+#bind M101 = 
+
+# [Alt + f]: jump to first unread message
+bind M102 = roster unread_first
+
+# [Alt + g]: toggle folding of currently selected group
+bind M103 = group toggle
+
+# [Alt + h]: 
+#bind M104 = 
+
+# [Alt + i]: display object info
+bind M105 = info
+
+# [Alt + j]: 
+#bind M106 = 
+
+# [Alt + k]: 
+#bind M107 = 
+
+# [Alt + l]: 
+#bind M108 = 
+
+# [Alt + m]: toggle multi-line mode (^D to send message)
+bind M109 = msay toggle_verbatim
+
+# [Alt + n]: next unread message
+bind M110 = roster unread_next
+
+# [Alt + o]: 
+#bind M111 = 
+
+# [Alt + p]: show pgp info for currently selected contact
+bind M112 = pgp info
+
+# [Alt + q]: 
+#bind M113 = 
+
+# [Alt + r]: 
+#bind M114 = 
+
+# [Alt + s]: 
+#bind M115 = 
+
+# [Alt + t]: 
+#bind M116 = 
+
+# [Alt + u]: 
+#bind M117 = 
+
+# [Alt + v]: 
+#bind M118 = 
+
+# [Alt + w]: 
+#bind M119 = 
+
+# [Alt + x]: switch to previously selected contact
+bind M120 = roster alternate
+
+# [Alt + y]: 
+#bind M122 = 
+
+# [Alt + z]: 
+#bind M122 
+
+# [EINF]
+bind 331 = roster unread_next
+
+# [ALT]+[up]/[down]
+bind M259 = buffer up
+bind M258 = buffer down
