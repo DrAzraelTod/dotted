@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ $# -eq 0  ]
+then
+chromium-browser --memory-model=low --purge-memory-button about:blank;
+else
+chromium-browser --memory-model=low --purge-memory-button $@;
+fi
