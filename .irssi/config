@@ -1,0 +1,397 @@
+servers = (
+  { address = "irc.stealth.net"; chatnet = "IRCnet"; port = "6668"; },
+  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
+  { 
+    address = "irc.undernet.org";
+    chatnet = "Undernet";
+    port = "6667";
+  },
+  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
+  { 
+    address = "irc.quakenet.org";
+    chatnet = "QuakeNet";
+    port = "6667";
+  },
+  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
+  {
+    address = "irc.ipv6.freenode.net";
+    port = "0";
+    chatnet = "freenode";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+    autosendcmd = "msg nickserv identify Dr_Azrael_Tod HAHA";
+  },
+  {
+    address = "irc6.euirc.net";
+    port = "6666";
+    chatnet = "euirc";
+    use_ssl = "no";
+    autoconnect = "yes";
+    autosendcmd = "msg nickserv identify HAHA; /msg sacred-chao !join #penis";
+  },
+  {
+    address = "irc.hq.c3d2.de";
+    chatnet = "c3d2";
+    port = "6668";
+    #6667 für non-ssl
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  IRCnet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "5";
+    max_whois = "4";
+    max_query_chans = "5";
+  };
+  EFNet = { 
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  Undernet = {
+    type = "IRC";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  DALnet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  QuakeNet = {
+    type = "IRC";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  SILC = { type = "SILC"; };
+  freenode = { type = "IRC"; };
+  euirc = { type = "IRC"; };
+  c3d2 = {
+    type = "IRC";
+    username = "antiheld";
+    realname = "Azrael Göttertod";
+    host = "g33ky.de";
+  };
+};
+
+channels = (
+  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
+  { name = "#zanzibar"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#countdown"; chatnet = "freenode"; autojoin = "no"; },
+  {
+    name = "#piratenpartei-sachsen";
+    chatnet = "freenode";
+    autojoin = "no";
+  },
+  { name = "#penis"; chatnet = "euirc"; autojoin = "no"; },
+  { name = "#linux"; chatnet = "euirc"; autojoin = "yes"; },
+  { name = "#sorgenkasten"; chatnet = "euirc"; autojoin = "no"; },
+  { name = "#ipv6"; chatnet = "euirc"; autojoin = "yes"; },
+  { name = "#c3d2"; chatnet = "c3d2"; autojoin = "yes"; },
+  { name = "#ac100"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#tegra2"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#heil.diskordia"; chatnet = "euIRC"; autojoin = "yes"; }
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec -out - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  identify = "msg nickserv identify Dr_Azrael_Tod HAHA";
+  ghost = "msg nickserv ghost Dr_Azrael_Tod";
+  dat = "nick Dr_Azrael_Tod";
+  TELNET = "window new hidden;window name telnet;exec -name telnet -nosh -interactive -window telnet $-\"";
+  SSH = "window new hidden;window name ssh;exec -name ssh -nosh -interactive -window ssh $-";
+  i = "msg nickserv identify HAHA";
+  summon = "msg Sacred-Chao !join #$1";
+};
+
+statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if it's argument isn't
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isn't empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " there shall be no topic";
+
+    # all of these treated specially, they're only displayed when needed
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  # there's two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+      disabled = "no";
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "active";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # we treat input line as yet another statusbar :) It's possible to
+    # add other items before or after the input line item.
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+settings = {
+  core = {
+    real_name = "Dr. Azrael Tod";
+    user_name = "antiheld";
+    nick = "Dr_Azrael_Tod";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    autolog = "yes";
+    emphasis_multiword = "yes";
+    bell_beeps = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGH";
+  };
+  "perl/core/scripts" = {
+    autoaway_timeout = "600";
+    nicklist_automode = "SCREEN";
+    nicklist_width = "20";
+    nicklist_height = "70";
+  };
+};
+hilights = (
+  { text = "dr_azrael_tod"; nick = "yes"; word = "yes"; },
+  { text = "dat|"; nick = "yes"; word = "yes"; },
+  { text = "Sacred-Chao"; nick = "yes"; word = "yes"; },
+  { text = "Azrael"; nick = "yes"; word = "yes"; },
+  { text = "bettman"; nick = "yes"; word = "yes"; },
+  { text = "Tod!"; nick = "yes"; word = "yes"; },
+  { text = "Tod\\ "; nick = "yes"; word = "yes"; }
+);
+ignores = (
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#chaosradio" ); },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#piratenpartei-sachsen" );
+  },
+  { level = "JOINS PARTS QUITS"; channels = ( "#Sorgenkasten" ); },
+  { mask = "*!pyChao@*dynamic.qsc.de"; level = "HILIGHTS"; },
+  { mask = "*pyChao@*dynamic.qsc.de"; level = "HILIGHTS"; },
+  { mask = "Sacred-Chao"; level = "HILIGHTS"; },
+  { mask = "~pyChao@*.dynamic.qsc.de"; level = "HILIGHTS"; },
+  { level = "JOINS PARTS"; channels = ( "#beem" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#inquisitio" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#ipv6" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#linux" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#nsfw" ); },
+  { mask = "t4nk064"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS"; channels = ( "#android-dev" ); },
+  { level = "JOINS PARTS"; channels = ( "#c3d2" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#windowmaker" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#trimslice" ); },
+  { 
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#sparkleshare" );
+  },
+  { level = "JOINS PARTS QUITS"; channels = ( "#lazarus-ide" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#countdown" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#ac100" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#tegra2" ); },
+  { level = "JOINS PARTS QUITS"; }
+);
+logs = { };
+windows = {
+  1 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#zanzibar";
+        tag = "freenode";
+      }
+    );
+  };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#linux";
+        tag = "euirc";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#c3d2";
+        tag = "c3d2";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ipv6";
+        tag = "euirc";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#countdown";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ipv6";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+};
+mainwindows = { 7 = { first_line = "1"; lines = "71"; }; };

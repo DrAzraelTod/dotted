@@ -1,0 +1,74 @@
+# Default Server List for podget
+# FORMAT:    <url> <category> <name>
+# NOTES: 
+#    1. The Category must be one word without spaces.  You may use underscores.
+#    2. Any spaces in the urls needs to be converted to %20 
+#    3. Disable the downloading of any feed by commenting it out with a #.
+#    4. If you are creating ASX playlists, make sure the feed name does not
+#       have any spaces in it.
+# Find more servers at: http://www.ipodder.org/directory/4/podcasts
+http://chaosradio.ccc.de/chaosradio_express-latest.rss ccc CRE Technik Kultur Gesellschaft
+http://www.ard.de/static/radio/radiofeature/rss/podcast.xml ÖR das ARD radiofeature
+http://feeds.feedburner.com/NotSafeForWorkPodcast sonst Not Safe For Work
+http://www.spieleveteranen.de/feed/podcast/ game Spieleveteranen
+http://feeds.feedburner.com/DerLautsprecher sonst Der Lautsprecher
+http://www.dradio.de/rss/podcast/sendungen/hintergrundpolitik/?mode=text ÖR dradio-Hintergrund
+http://www.ndr.de/podcast/extradrei196.xml Comedy extra 3 
+http://podcast.3sat.de/neues/podcast/podcast.xml ÖR Neues 
+http://www.ndr.de/podcast/podcast2956.xml Comedy NDR 2 - Fr&#xFChst&#xFCck bei Stefanie
+http://podcast.wdr.de/radio/wdr2kabarett.xml Comedy Kabarett im WDR 2-Radio zum Mitnehmen
+http://www.dradio.de/rss/podcast/sendungen/kommentar/ ÖR dradio-Kommentar
+http://klavierkabarettist.podspot.de/rss Comedy Klavierkabarett
+http://www.fritz.de/media/podcasts/serien/neues_vom_kaenguru_podcast.feed.podcast.xml Comedy Neues vom K&#xE4nguru
+http://feeds.feedburner.com/datenschorle sonst Datenschorle
+http://podcast.hr-online.de/lateline/podcast.xml ÖR LateLine
+http://pcast.sr-online.de/feeds/fragen/feed.xml ÖR SR 2 - Fragen an den Autor
+http://pcast.sr-online.de/feeds/sr2-fragen-klassiker/feed.xml ÖR Klassiker von &quotFragen an den Autor&quot
+http://www.dradio.de/rss/podcast/sendungen/forschak/?mode=text ÖR dradio-Forschung Aktuell
+http://www.dradio.de/rss/podcast/sendungen/politischesfeuilleton/?mode=text ÖR dradio-Politisches Feuilleton
+http://www.dradio.de/rss/podcast/sendungen/computer/ ÖR dradio-Computer und Kommunikation
+http://hauhechel.podspot.de/rss Comedy HAUHECHEL Kabarett
+http://www.radioeins.de/rss.xml?beitrag_112658 sonst Escape - Der Experte
+http://www.c3d2.de/pentacast.xml ccc Pentacast
+http://podcast.wdr.de/radio/klartext.xml ÖR Klartext im WDR 2-Radio zum Mitnehmen
+http://podcast.hr-online.de/hr_info_rueckspiegel/podcast.xml ÖR hr-iNFO Klartext
+http://feeds.feedburner.com/boyt sonst Best of YouTube (video)
+http://www.pofacs.de/rss/itunes.xml sonst POFACS
+http://audio.zeit.de/podcast/wissen.xml sonst ZEIT Wissen &#x2013 Der Podcast
+http://www.br-online.de/podcast/iq/cast.xml ÖR IQ - Wissenschaft und Forschung - Bayern 2
+http://www.gamesundso.de/feed/ game Games und so
+http://fnordfunk.cccmz.de/index.php?/mediatype_audio_mp3/feeds/categories/9-Fnordfunk.rss sonst Fnordfunk  Radio von Nerds f&#xFCr jeden
+http://static.orf.at/podcast/fm4/fm4_science_busters.xml sonst FM4 Science Busters
+http://chaosradio.ccc.de/chaosradio-complete.rss ccc Chaosradio (Alle Sendungen)
+http://chaosradio.ccc.de/dossier_chaotique-complete.rss ccc Dossier Chaotique (Alle Sendungen)
+http://www.dradio.de/rss/podcast/sendungen/breitband/ ÖR dradio-Breitband
+http://feeds.feedburner.com/HackerMedley sonst Hacker Medley
+http://philipbanse.de/wp/feed/ sonst Philip Banse
+http://www1.swr.de/podcast/xml/swr2/aula.xml ÖR SWR2 Aula
+http://www1.swr.de/podcast/xml/swr2/wissen.xml ÖR SWR2 Wissen
+http://feeds.feedburner.com/logbuch-netzpolitik sonst LogbuchNetzpolitik
+http://podcast.wdr.de/radio/politikum.xml sonst Politikum - Das Meinungsmagazin im WDR 5-Radio zum Mitnehmen
+http://www.c3d2.de/pentaradio.xml ccc Pentaradio
+http://goingquantum.ca/feed/podcast/ musik The Going Quantum Podcast
+http://feeds.feedburner.com/mikrodilettanten sonst Mikrodilettanten
+http://feeds.feedburner.com/podcastsemak sonst Nicolas Semak  Podcast
+http://feeds.feedburner.com/channelflip/mitchell/itunes Comedy David Mitchells SoapBox
+http://podcast.armadamusic.com/asot/podcast.xml musik A State of Trance Official Podcast
+http://feeds.kexp.org/kexp/songoftheday musik KEXP Song of the Day
+http://alternativlos.org/ogg.rss ccc Alternativlos
+http://www.darkerradio.com/category/podcast/feed/ musik darkerradio - Voices from the underground &#xBB Podcast
+http://www.wrint.de/?feed=rss2 sonst WRINT
+http://officialaviciipodcast.podtree.com/feed/podcast/? musik AVICII - LEVELS PODCAST
+http://dubzilla.podOmatic.com/rss2.xml musik Dubzilla Dubstep 
+http://minnesota.publicradio.org/tools/podcasts/song-of-the-day.php musik The Current Song of the Day - Minnesota Public Radio
+http://www.newmusicmonday.com/podcast/newmusicmonday.xml musik New Music Monday - Free Song a Month (and other stuff too)
+http://podcasts.flaix.fr/corstenscountdown?format=xml musik Corstens Countdown Official Podcast by FLAIXfr
+http://ericprydz.podtree.com/feed/podcast musik ERIC PRYDZ - EPIC RADIO
+http://iclubdub1.libsyn.com/rss musik iClub DUB  Dubstep
+http://oakenfold.libsyn.com/rss musik Perfecto Podcast featuring Paul Oakenfold
+http://www.br-online.de/podcast/radiospitzen/cast.xml Comedy radioSpitzen - Bayern 2
+http://www1.swr.de/podcast/xml/swr2/spaetvorstellung.xml ÖR SWR2 Sp&#xE4tvorstellung
+http://www.ndr.de/ndr2/programm/sendungen/der_ndr2_morgen/podcast4044.xml Comedy Wer piept denn da
+http://deathtechno.podomatic.com/rss2.xml musik Death Techno
+http://www.ndr.de/podcast/podcast3002.xml Comedy NDR Info - Der satirische Wochenr&#xFCckblick
+http://podcast.wdr.de/radio/spass5.xml Comedy Spa&#xDF5 im WDR 5-Radio zum Mitnehmen
