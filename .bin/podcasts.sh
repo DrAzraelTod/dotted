@@ -1,11 +1,1 @@
-#!/bin/bash
-pushd .;
-cd /home/dat/AeroFS/public/podcasts;
-podget >&1;
-rm ./*.m3u
-m3u.sh . relative;
-sed -e "s/.\//http:\/\/g33ky.de\/static\/podcasts\//" relative.m3u > absolute.m3u;
-cat absolute.m3u;
-echo  -n 'Gefundene feeds:';
-grep -c '\n' absolute.m3u;
-popd;
+/home/dat/AeroFS/public/podcasts/shell/podcasts.sh
