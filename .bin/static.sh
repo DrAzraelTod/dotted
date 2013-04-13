@@ -5,6 +5,6 @@ while true
 do
     clear;
     echo "Static:";
-    less /var/log/nginx/static.access.log | grep -v .css | grep -v 93.159.98.161 |grep -v robots.txt | grep -v '/static/images/qr.png' | grep -v "static/admin_media/" | grep -v '" 404 ' | grep -v " /static/podcasts/";
+    less /var/log/nginx/static.access.log | grep -v .css | grep -v 93.159.98.161 |grep -v robots.txt | grep -v '/static/images/qr.png' | grep -v "static/admin_media/" | grep -v '" 404 ' | grep -v " /static/podcasts/" | grep -v ' "GET /static/isx/';
     sleep 300;
 done;
